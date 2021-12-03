@@ -12,25 +12,19 @@ def load_array():
 
     return output
 
-
 def invert_bit(bit):
-
     output = ""
-
     for char in bit:
         output += str(int(char) ^ 1)
     
     return output
 
 
-
 def solve(binary_numbers):
-
     majority = len(binary_numbers) // 2
     most_common = {}
     for i in range(len(binary_numbers[0])):
         most_common[i] = 0
-
 
     for num in binary_numbers:
         for i,char in enumerate(num):
@@ -47,11 +41,5 @@ def solve(binary_numbers):
     epsilon = invert_bit(gamma)
 
     return int(gamma, 2) * int(epsilon, 2)
-
-
-
-
-        
-
 
 print(solve(load_array()))

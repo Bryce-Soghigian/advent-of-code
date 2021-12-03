@@ -22,9 +22,7 @@ def invert_bit(bit):
 
 def solve(binary_numbers):
     majority = len(binary_numbers) // 2
-    most_common = {}
-    for i in range(len(binary_numbers[0])):
-        most_common[i] = 0
+    most_common = [0 for i in range(len(binary_numbers[0]))]
 
     for num in binary_numbers:
         for i,char in enumerate(num):

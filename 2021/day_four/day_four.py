@@ -1,32 +1,3 @@
-"""
-
-1. Count the sum of each board.
-2. Generate sets with all of the column and row values
-   
-   each board will have sets of columns and sets of rows
-
-for each board we want to store the 
-
-
-
-
-
-Define a winner
-
-Their board needs to be filled in either horizonal markings or vertical
-
-
-as we mark the board, we want to keep track of the sum of our board
-
-
-
-Evaluating a board is O(10)
-
-
-GraphNode:
-  value
-  visited
-"""
 
 class Board:
     def __init__(self, matrix) -> None:
@@ -92,6 +63,7 @@ class PlayBingoAgainstSquidBruh:
                         board.board_sum -= move
                     
                         if len(board.rows[curr]) == 0 or len(board.columns[curr]) == 0:
+                            print(f'columns:{board.columns}')
                             return board.board_sum * move
 
         # if there is no winning state 
